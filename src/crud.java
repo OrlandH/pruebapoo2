@@ -27,6 +27,7 @@ public class crud {
     static final String PASS = "root_bas3";
 
     public crud() {
+        estudiante Est1 = new estudiante(0, 0,"","","");
         limpiarElFormularioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -40,21 +41,21 @@ public class crud {
         ingresarElPresenteRegistroButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int cod = Integer.parseInt(codigot.getText());
-                int cedula = Integer.parseInt(cedulat.getText());
-                String nombre = nombret.getText();
-                String fechanac= fechat.getText();
-                String sigz= signot.getSelectedItem().toString();
+                Est1.setCod(Integer.parseInt(codigot.getText()));
+                Est1.setCed(Integer.parseInt(cedulat.getText()));
+                Est1.setNombre(nombret.getText());
+                Est1.setFecha(fechat.getText());
+                Est1.setSigno(signot.getSelectedItem().toString());
 
                 try (Connection conn = DriverManager.getConnection(DB_URL,USER,PASS))
                 {
                     String SQL_QUERY = "INSERT INTO est_prueba2 (codigo_est, cedula, nombre, fecha_nac, signo) VALUES (?,?,?,?,?)";
                     try(PreparedStatement pstmt = conn.prepareStatement(SQL_QUERY)){
-                        pstmt.setInt(1,cod);
-                        pstmt.setInt(2,cedula);
-                        pstmt.setString(3,nombre);
-                        pstmt.setString(4,fechanac);
-                        pstmt.setString(5,sigz);
+                        pstmt.setInt(1,Est1.getCod());
+                        pstmt.setInt(2,Est1.getCed());
+                        pstmt.setString(3,Est1.getNombre());
+                        pstmt.setString(4,Est1.getFecha());
+                        pstmt.setString(5,Est1.getSigno());
 
                         int filasInsertadas = pstmt.executeUpdate();
                         if (filasInsertadas > 0){
