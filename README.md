@@ -35,3 +35,17 @@ SELECT * FROM est_prueba2;
 
 
 # Capturas
+Ingresar
+![image](https://github.com/OrlandH/pruebapoo2/assets/117741739/a7a1ef1d-891f-4ae9-948c-238ba505ca75)
+Buscar: 
+![image](https://github.com/OrlandH/pruebapoo2/assets/117741739/b0a9a147-b766-4077-b525-23f4babf17e2)
+![image](https://github.com/OrlandH/pruebapoo2/assets/117741739/37a99b8c-0515-43e4-918d-c494e64202ec)
+
+
+Eliminar:
+![image](https://github.com/OrlandH/pruebapoo2/assets/117741739/57277289-07f8-493b-987d-d0e57d4f676b)
+
+Actualizar:
+![image](https://github.com/OrlandH/pruebapoo2/assets/117741739/86045ce8-2fbb-4cc6-a84b-56af05934de9)
+
+
